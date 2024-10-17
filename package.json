@@ -1,7 +1,7 @@
 {
-  "name": "outside",
+  "name": "perFinder",
   "version": "2.0.0",
-  "description": "Boilerplate for WDD 330 SleepOutside project",
+  "description": "Website for finding pets",
   "main": "main.js",
   "scripts": {
     "start": "vite",
@@ -12,7 +12,7 @@
     "test": "jest"
     
   },
-  "author": "Shane Thompson",
+  "author": "Ben LeBeau",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.56.0",
