@@ -9,6 +9,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "src/index.html"),
+        breedlist: resolve(__dirname, "src/breedlist/index.html"),
       },
     },
   },
