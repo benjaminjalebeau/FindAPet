@@ -1,5 +1,5 @@
 {
-  "name": "petFinder",
+  "name": "findpet",
   "version": "2.0.0",
   "description": "Website for finding pets",
   "main": "main.js",
