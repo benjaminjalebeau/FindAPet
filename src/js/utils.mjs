@@ -73,3 +73,27 @@ export function formDataToJSON(formElement) {
 
   return convertedJSON;
 }
+
+// render a list with template
+export function renderListWithTemplate(
+  templateFn,
+  parentElement,
+  list,
+  position = "afterbegin",
+  clear = false,
+) {
+  if (clear) {
+    parentElement.innerHTML = "";
+  }
+
+  const htmlStrings = list.map((product) => templateFn(product));
+  parentElement.insertAdjacentHTML(position, htmlStrings.join(" "));
+}
+
+// get URL Parameters
+export function getParams(param) {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const product = urlParams.get(param);
+  return product;
+}

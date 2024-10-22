@@ -1,20 +1,10 @@
 // function for the API to pull page text from wikipedia page, limited to 500 characters. Requires breed name pulled from different api.
 // Function will need to be modified to insert text to an html element instead of the console.
-export async function wikiAPI(breedName){
-  const url = "https://en.wikipedia.org/w/api.php?origin=*&action=query&prop=extracts&exlimit=1&titles=" + breedName + "&explaintext=1&exsectionformat=plain&format=json"
-  const options = {method: 'GET'};
 
-  try {
-    const response = await fetch(url, options);
-    const result = await response.json();
-    const pageNumber = String(Object.keys(result.query.pages)[0])
-    const pageText = result.query.pages[pageNumber].extract
-    const wikiURL = "https://en.wikipedia.org/wiki/" + breedName
-    console.log(pageText.slice(0, 500) + "...   Look at the full page here: " + wikiURL.replace(/ /g,"_"));
-  } catch (error) {
-    console.log("Sorry, it looks like we can't get you a desription of this breed at this time...");
-  }
-}
+
+
+// Function get data from ninja api for dogs. Can only return up to 20 results, must have parameters.
+// Parameters are number values used for url parameters
 
 
 
