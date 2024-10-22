@@ -13,24 +13,19 @@ export default class ExternalServices {
     //Pulls data from wikipedia api to get info based of breed name. 
     //Works with name returned from ninjaDogAPI
     async getWikiAPIdata(breedName){
-
-        const url = "https://en.wikipedia.org/w/api.php?origin=*&action=query&prop=extracts&exlimit=1&titles=" + breedName + "&explaintext=1&exsectionformat=plain&format=json"
-        const options = {method: 'GET'};
-      
-        try {
-          const response = await fetch(url, options);
-          const result = convertToJson(response);
-          const pageNumber = String(Object.keys(result.query.pages)[0])
-          const pageText = result.query.pages[pageNumber].extract
-          const wikiURL = "https://en.wikipedia.org/wiki/" + breedName
-          const content = pageText.slice(0, 500) + "...   Look at the full page here: " + wikiURL.replace(/ /g,"_");
-          console.log(content);
-          return content
-        } catch (error) {
-          const message = "Sorry, it looks like we can't get you a desription of this breed at this time...";
-          console.log(message);
-          return message;
-        }
+      const url = "https://en.wikipedia.org/w/api.php?origin=*&action=query&prop=extracts&exlimit=1&titles=" + breedName + "&explaintext=1&exsectionformat=plain&format=json"
+      const options = {method: 'GET'};
+    
+      try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        const pageNumber = String(Object.keys(result.query.pages)[0])
+        const pageText = result.query.pages[pageNumber].extract
+        const wikiURL = "https://en.wikipedia.org/wiki/" + breedName
+        return pageText.slice(0, 500) + "...   Look at the full page here: " + wikiURL.replace(/ /g,"_")
+      } catch (error) {
+        console.log("Sorry, it looks like we can't get you a desription of this breed at this time...");
+      }
     }
     //API data from ninjaAPI Uses 5 parameters to get a list of breeds. 
     //Parameters are defined by user and are in local storage under key: "UserAnswers"

@@ -137,8 +137,6 @@ export default class BreedInfo {
     async init(){
         const result = await this.dataSource.getNinjaDogAPIdataByName(this.breedName);
         this.breedInfo = result[0];
-        console.log("look here");
-        console.log(this.breedInfo.name);
         this.breedDescription = await this.dataSource.getWikiAPIdata(this.breedInfo.name);
         this.renderBreedInfo();
         this.renderBreedDescription()
