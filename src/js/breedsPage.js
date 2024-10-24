@@ -8,7 +8,7 @@ import ExternalServices from "./ExternalServices.mjs";
 loadHeaderNavFooter();
 
 //Checks to make sure both forms were filled out and stored in local storage.
-if(!getLocalStorage("UserAnswers") || !getLocalStorage("UserPreferences") ){
+if(!getLocalStorage("UserAnswers") || !getLocalStorage("UserPreference") ){
     //If either form is not filled, will return a message.
     document.querySelector("#incompleteFormMessage").innerHTML = "Please go back to the home page and submit both forms!";
 } else{

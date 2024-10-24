@@ -12,12 +12,12 @@
     <header class="divider" id="headerPartial"></header>
     <nav id="navPartial"></nav>
     <h1>Home</h1>
-    <div id="sumbitMessage"></div>
+    <div id="submitAnswersMessage"></div>
     <div id="formBox">
       <form id="userInfoForm">
 
-        <label for="barkingLevel">Where do you live?</label><br>
-        <select name="barkingLevel" id="barkingLevel" form="userInfoForm" required>
+        <label for="barking">Where do you live?</label><br>
+        <select name="barking" id="barkingLevel" form="userInfoForm" required>
             <option value=''>Which option best describes you?</option>
             <option value="1">I live in a box, surrounded by other boxes</option>
             <option value="2">I share a yard with multiple people</option>
@@ -26,8 +26,8 @@
             <option value="5">I can't see my neighbors house from my porch</option>
         </select><br>
     
-        <label for="energyLevel">How active would you say you are?</label><br>
-        <select name="energyLevel" id="energyLevel" form="userInfoForm" required>
+        <label for="energy">How active would you say you are?</label><br>
+        <select name="energy" id="energyLevel" form="userInfoForm" required>
             <option value=''>Which option best describes you?</option>
             <option value="1">I don't touch grass</option>
             <option value="2">I occasionally go on walks</option>
@@ -36,18 +36,18 @@
             <option value="5">Permanent Cabin Fever</option>
         </select><br>
     
-        <label for="sheddingLevel">How do you feel about dog hair?</label><br>
-        <select name="sheddingLevel" id="sheddingLevel" form="userInfoForm" required>
+        <label for="shedding">How do you feel about dog hair?</label><br>
+        <select name="shedding" id="sheddingLevel" form="userInfoForm" required>
             <option value=''>Which option best describes you?</option>
-            <option value="1">I'm allergic'</option>
+            <option value="1">I'm allergic</option>
             <option value="2">I own a dozen lint rollers</option>
             <option value="3">It doesn't bother me as long as I vaccum everyday</option>
             <option value="4">As long as it doesn't get in my mouth</option>
             <option value="5">I'll endure anything for a puppy</option>
         </select><br>
     
-        <label for="protectiveLevel">How social are you?</label><br>
-        <select name="protectiveLevel" id="protectiveLevel" form="userInfoForm" required>
+        <label for="protectiveness">How social are you?</label><br>
+        <select name="protectiveness" id="protectiveLevel" form="userInfoForm" required>
             <option value=''>Which option best describes you?</option>
             <option value="5">I'm allergic to people</option>
             <option value="4">Small talk makes me anxious</option>
@@ -56,8 +56,8 @@
             <option value="1">I like to party</option>
         </select><br>
     
-        <label for="trainabilityLevel">How patient are you?</label><br>
-        <select name="trainabilityLevel" id="trainabilityLevel" form="userInfoForm" required>
+        <label for="trainability">How patient are you?</label><br>
+        <select name="trainability" id="trainabilityLevel" form="userInfoForm" required>
             <option value=''>Which option best describes you?</option>
             <option value="5">I open my presents before chirstmas/birthday</option>
             <option value="4">I skip to the last page of every book</option>
@@ -72,10 +72,10 @@
         <button id="saveAnswers" type="submit">Save Answers</button><br>
       </form>
 
-      
+      <div id="submitPreferencesMessage"></div>
       <form id="userPreferenceForm">
-        <label for="rank1">Which dog trait bothers you the most?</label><br>
-        <select id="rank1" name="rank1" form="userPreferenceForm" required>
+        <label for="defaultParam">Which dog trait bothers you the most?</label><br>
+        <select id="defaultParam" name="defaultParam" form="userPreferenceForm" required>
           <option value=''>Select a dog trait</option>
           <option value="barking">Barking</option>
           <option value="shedding">Shedding</option>
@@ -84,45 +84,6 @@
           <option value="protectiveness">Is Overprotective</option>
         </select><br>
 
-        <label for="rank2">Which dog trait bothers you the 2nd most?</label><br>
-        <select id="rank2" name="rank2" form="userPreferenceForm" required>
-          <option value=''>Select a dog trait</option>
-          <option value="barking">Barking</option>
-          <option value="shedding">Shedding</option>
-          <option value="energy">Needs Constant Attention</option>
-          <option value="trainability">Doesn't listen to you</option>
-          <option value="protectiveness">Is Overprotective</option>
-        </select><br>
-
-        <label for="rank3">Which dog trait bothers you the 3rd most?</label><br>
-        <select id="rank3" name="rank3" form="userPreferenceForm" required>
-          <option value=''>Select a dog trait</option>
-          <option value="barking">Barking</option>
-          <option value="shedding">Shedding</option>
-          <option value="energy">Needs Constant Attention</option>
-          <option value="trainability">Doesn't listen to you</option>
-          <option value="protectiveness">Is Overprotective</option>
-        </select><br>
-
-        <label for="rank4">Which dog trait bothers you the 4th most?</label><br>
-        <select id="rank4" name="rank4" form="userPreferenceForm" required>
-          <option value=''>Select a dog trait</option>
-          <option value="barking">Barking</option>
-          <option value="shedding">Shedding</option>
-          <option value="energy">Needs Constant Attention</option>
-          <option value="trainability">Doesn't listen to you</option>
-          <option value="protectiveness">Is Overprotective</option>
-        </select><br>
-
-        <label for="rank5">Which dog trait bothers you the least?</label><br>
-        <select id="rank5" name="rank5" form="userPreferenceForm" required>
-          <option value=''>Select a dog trait</option>
-          <option value="barking">Barking</option>
-          <option value="shedding">Shedding</option>
-          <option value="energy">Needs Constant Attention</option>
-          <option value="trainability">Doesn't listen to you</option>
-          <option value="protectiveness">Is Overprotective</option>
-        </select><br>
         <button id="savePreference" type="submit">Save Preferences</button><br>
 
       </form>

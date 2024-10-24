@@ -1,5 +1,5 @@
 import { formDataToJSON, setLocalStorage } from "./utils.mjs";
-
+//Handles form data with local storage.
 export default class UserInfo {
     
     async saveData(){
@@ -8,9 +8,10 @@ export default class UserInfo {
         setLocalStorage("UserAnswers", json);
     }
 
-    async savePreferences(){
+    async savePreference(){
         const formElement = document.forms["userPreferenceForm"];
         const json = formDataToJSON(formElement);
-        setLocalStorage("UserPreferences", json);
+        setLocalStorage("UserPreference", json);
     }
+    
 }
