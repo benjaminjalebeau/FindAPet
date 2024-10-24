@@ -14,6 +14,7 @@ document.querySelector("#userInfoForm").addEventListener("submit", (e) => {
     e.preventDefault();
     //calls User Info Module, to save answers to local storage
     document.querySelector("#submitAnswersMessage").innerHTML = "Answers Saved! Make sure you fill out the Preference Form Below!"
+    document.querySelector("#submitAnswersMessage").removeAttribute('hidden');
     userAnswers.saveData();
     
   });
@@ -23,6 +24,7 @@ document.querySelector("#userPreferenceForm").addEventListener("submit", (e) => 
   e.preventDefault();
   //calls User Info Module, to save answers to local storage
   document.querySelector("#submitPreferencesMessage").innerHTML = "Preference Saved! If both forms were submitted, select the breed list tab!"
+  document.querySelector("#submitPreferencesMessage").removeAttribute('hidden');
   userAnswers.savePreference();
   
   
@@ -33,4 +35,6 @@ document.querySelector("#clearAnswers").addEventListener("click", (e) => {
     localStorage.clear();
     document.querySelector("#submitAnswersMessage").innerHTML = "Answers have been cleared"
     document.querySelector("#submitPreferencesMessage").innerHTML = "Preferences have been cleared"
+    document.querySelector("#submitAnswersMessage").removeAttribute('hidden');
+    document.querySelector("#submitPreferencesMessage").removeAttribute('hidden');
   });

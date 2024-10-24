@@ -26,7 +26,7 @@ export default class ExternalServices {
         const pageNumber = String(Object.keys(result.query.pages)[0])
         const pageText = result.query.pages[pageNumber].extract
         const wikiURL = "https://en.wikipedia.org/wiki/" + breedName
-        return pageText.slice(0, 500) + "...   Look at the full page here: " + wikiURL.replace(/ /g,"_")
+        return pageText.slice(0, 800) + "...   <br><br>Look at the full page here: " + wikiURL.replace(/ /g,"_")
       } catch (error) {
         console.log("Sorry, it looks like we can't get you a desription of this breed at this time...");
       }

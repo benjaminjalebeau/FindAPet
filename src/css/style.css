@@ -1,0 +1,195 @@
+/*
+*****Colors*****
+Main{color: #16325B;}
+Sec {color: #227B94;}
+Ter {color: #78B7D0;}
+Acc {color: #FFDC7F;}
+
+*****Fonts*****
+Headers{font-family: Georgia, serif;}
+Content{font-family: Arial, sans-serif;}
+*/
+body{
+    background-color: #16325B;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1,h2,h3 {
+    font-family: Georgia, serif;
+}
+
+#contentWrapper{
+    margin: auto;
+    width: 450px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #FFDC7F;
+    border-radius: 15px;
+    background-color: white;
+}
+
+
+/*****Header/Nav*****/
+.logo{
+    text-align: center;
+}
+nav{
+    background-color: #227B94;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 1em 0 1em 0;
+}
+
+nav ul li{
+    width: 180px;
+    text-align: center;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+  }
+
+nav ul li a:hover{
+    color: #FFDC7F;
+    text-decoration: underline;
+    font-weight: bolder;
+  }
+
+/*****Main Content*****/
+main {
+    margin: auto;
+    width: 95%;
+}
+/*Forms*/
+form{
+    background-color: #227B94;
+    color: white;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #FFDC7F;
+    border-radius: 15px;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+form label{
+    margin-left: .2em;
+}
+
+form select{
+    border-radius: 6px;
+    width: 100%;
+    padding: .2em .1em;
+    font-size: 1.1em;
+    margin: .3em 0 1em 0;
+    border: solid 2px transparent;
+}
+
+form select:hover{
+    border: solid 2px #16325B;
+}
+
+.buttonBox{
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+form button{
+    background-color: #16325B;
+    border: solid 2px transparent;;
+    color: #FFDC7F;
+    border-radius: 6px;
+    padding: .5em 1em;
+    
+}
+
+form button:hover{
+    background-color: #78B7D0;
+    color: black;
+}
+
+form button:active {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FFDC7F;
+}
+
+#clearAnswers{
+    width: 80%;
+    color: white;
+    background-color: rgb(124, 2, 2);
+    border-style: solid;
+    border-width: 3px;
+    border-color: #FFDC7F;
+    padding: .3em 0;
+}
+
+#clearAnswers:hover {
+    border-color: red;
+    color: #FFDC7F;
+}
+
+#clearAnswers:active {
+    background-color: #FFDC7F;
+    color: rgb(124, 2, 2);
+}
+
+.formAlert{
+    color: rgb(124, 2, 2);
+    font-weight: bolder;
+    border: solid 2px red;
+    background-color: #FFDC7F;
+    padding: .2em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+/*****Footer*****/
+footer{
+    padding: 1em;
+    font-size: .7em;
+}
+
+/*****BreedList Page*****/
+.breedList{
+    list-style-type: none;
+    padding: 0;
+}
+
+.breedList li{
+    width: 90%;
+    padding: 1em;
+    background-color: #227B94;
+    border: solid 3px #FFDC7F;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    
+}
+
+.breedList li:hover{
+    border-color: #16325B;
+    background-color: #78B7D0;
+}
+
+.breedList li a {
+    text-align: center;
+    color: #FFDC7F;
+    
+}
+
+.breedList li a img{
+    max-width: 100%;
+}
+
+/*****BreedInfo Page*****/
+#breedInfoContainer img{
+    max-width: 100%;
+}
+

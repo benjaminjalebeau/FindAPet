@@ -9,87 +9,103 @@
     <!--script type="module" src="js/api.js"></script-->
   </head>
   <body>
+    <div id="contentWrapper">
+    
     <header class="divider" id="headerPartial"></header>
     <nav id="navPartial"></nav>
-    <h1>Home</h1>
-    <div id="submitAnswersMessage"></div>
-    <div id="formBox">
-      <form id="userInfoForm">
+    
+    <main>
+      <h2>Home</h2>
 
-        <label for="barking">Where do you live?</label><br>
-        <select name="barking" id="barkingLevel" form="userInfoForm" required>
-            <option value=''>Which option best describes you?</option>
-            <option value="1">I live in a box, surrounded by other boxes</option>
-            <option value="2">I share a yard with multiple people</option>
-            <option value="3">I have my own backyard</option>
-            <option value="4">I could play a football game in my backyard</option>
-            <option value="5">I can't see my neighbors house from my porch</option>
-        </select><br>
-    
-        <label for="energy">How active would you say you are?</label><br>
-        <select name="energy" id="energyLevel" form="userInfoForm" required>
-            <option value=''>Which option best describes you?</option>
-            <option value="1">I don't touch grass</option>
-            <option value="2">I occasionally go on walks</option>
-            <option value="3">I enjoy being outside</option>
-            <option value="4">I need to be outside</option>
-            <option value="5">Permanent Cabin Fever</option>
-        </select><br>
-    
-        <label for="shedding">How do you feel about dog hair?</label><br>
-        <select name="shedding" id="sheddingLevel" form="userInfoForm" required>
-            <option value=''>Which option best describes you?</option>
-            <option value="1">I'm allergic</option>
-            <option value="2">I own a dozen lint rollers</option>
-            <option value="3">It doesn't bother me as long as I vaccum everyday</option>
-            <option value="4">As long as it doesn't get in my mouth</option>
-            <option value="5">I'll endure anything for a puppy</option>
-        </select><br>
-    
-        <label for="protectiveness">How social are you?</label><br>
-        <select name="protectiveness" id="protectiveLevel" form="userInfoForm" required>
-            <option value=''>Which option best describes you?</option>
-            <option value="5">I'm allergic to people</option>
-            <option value="4">Small talk makes me anxious</option>
-            <option value="3">All my friends are blood related</option>
-            <option value="2">I go to social events that don't provide food.</option>
-            <option value="1">I like to party</option>
-        </select><br>
-    
-        <label for="trainability">How patient are you?</label><br>
-        <select name="trainability" id="trainabilityLevel" form="userInfoForm" required>
-            <option value=''>Which option best describes you?</option>
-            <option value="5">I open my presents before chirstmas/birthday</option>
-            <option value="4">I skip to the last page of every book</option>
-            <option value="3">I don't same-day all my deliveries</option>
-            <option value="2">I don't mind the DMV or traffic</option>
-            <option value="1">Wandering a desert for 40 years doesn't sound bad.</option>
-        </select><br>
+      
+
+      <div class="formBox">
+        
+        <form id="userInfoForm">
+          <div id="submitAnswersMessage" class="formAlert" hidden></div>
+
+          <label for="barking">Where do you live?</label><br>
+          <select name="barking" id="barkingLevel" form="userInfoForm" required>
+              <option value=''>Which option best describes you?</option>
+              <option value="1">I live in a box, surrounded by other boxes</option>
+              <option value="2">I share a yard with multiple people</option>
+              <option value="3">I have my own backyard</option>
+              <option value="4">I could play a football game in my backyard</option>
+              <option value="5">I can't see my neighbors house from my porch</option>
+          </select><br>
+      
+          <label for="energy">How active would you say you are?</label><br>
+          <select name="energy" id="energyLevel" form="userInfoForm" required>
+              <option value=''>Which option best describes you?</option>
+              <option value="1">I don't touch grass</option>
+              <option value="2">I occasionally go on walks</option>
+              <option value="3">I enjoy being outside</option>
+              <option value="4">I need to be outside</option>
+              <option value="5">Permanent Cabin Fever</option>
+          </select><br>
+      
+          <label for="shedding">How do you feel about dog hair?</label><br>
+          <select name="shedding" id="sheddingLevel" form="userInfoForm" required>
+              <option value=''>Which option best describes you?</option>
+              <option value="1">I'm allergic</option>
+              <option value="2">I own a dozen lint rollers</option>
+              <option value="3">I'm fine as long as I vaccum everyday</option>
+              <option value="4">As long as it doesn't get in my mouth</option>
+              <option value="5">I'll endure anything for a puppy</option>
+          </select><br>
+      
+          <label for="protectiveness">How social are you?</label><br>
+          <select name="protectiveness" id="protectiveLevel" form="userInfoForm" required>
+              <option value=''>Which option best describes you?</option>
+              <option value="5">I'm allergic to people</option>
+              <option value="4">Small talk makes me anxious</option>
+              <option value="3">All my friends are blood related</option>
+              <option value="2">I go to social events that don't provide food.</option>
+              <option value="1">I like to party</option>
+          </select><br>
+      
+          <label for="trainability">How patient are you?</label><br>
+          <select name="trainability" id="trainabilityLevel" form="userInfoForm" required>
+              <option value=''>Which option best describes you?</option>
+              <option value="5">I open my presents before chirstmas/birthday</option>
+              <option value="4">I skip to the last page of every book</option>
+              <option value="3">I don't same-day all my deliveries</option>
+              <option value="2">I don't mind the DMV or traffic</option>
+              <option value="1">Wandering a desert for 40 years isn't bad.</option>
+          </select><br>
+          <div class="buttonBox">
+            <button id="saveAnswers" type="submit">Save Answers</button><br>
+          </div>
+        </form>
 
         
+        <form id="userPreferenceForm">
+          <div id="submitPreferencesMessage" class="formAlert" hidden></div>
 
-    
-        <button id="saveAnswers" type="submit">Save Answers</button><br>
-      </form>
+          <label for="defaultParam">Which dog trait bothers you the most?</label><br>
+          <select id="defaultParam" name="defaultParam" form="userPreferenceForm" required>
+            <option value=''>Select a dog trait</option>
+            <option value="barking">Barking</option>
+            <option value="shedding">Shedding</option>
+            <option value="energy">Needs Constant Attention</option>
+            <option value="trainability">Doesn't listen to you</option>
+            <option value="protectiveness">Is Overprotective</option>
+          </select><br>
+          <div class="buttonBox">
+            <button id="savePreference" type="submit">Save Preference</button><br>
+          </div>
 
-      <div id="submitPreferencesMessage"></div>
-      <form id="userPreferenceForm">
-        <label for="defaultParam">Which dog trait bothers you the most?</label><br>
-        <select id="defaultParam" name="defaultParam" form="userPreferenceForm" required>
-          <option value=''>Select a dog trait</option>
-          <option value="barking">Barking</option>
-          <option value="shedding">Shedding</option>
-          <option value="energy">Needs Constant Attention</option>
-          <option value="trainability">Doesn't listen to you</option>
-          <option value="protectiveness">Is Overprotective</option>
-        </select><br>
+        </form>
+        <div class="buttonBox">
+          <button id="clearAnswers">Clear Answers and Preference</button>
+        </div>
+        
+      </div>
 
-        <button id="savePreference" type="submit">Save Preferences</button><br>
-
-      </form>
-      <button id="clearAnswers">Clear Answers</button>
-    </div>
+    </main>
 
     <footer id="footerPartial"></footer>
+
+  </div>
   </body>
 </html>
