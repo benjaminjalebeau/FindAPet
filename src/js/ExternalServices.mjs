@@ -46,15 +46,15 @@ export default class ExternalServices {
       for(let i = 0; i < 5; i++){
         ansKey = Object.keys(ans)[i];
         param = ans[ansKey];
-        if(ansKey === "protectiveness" || ansKey === "trainability"){
+        if(ansKey === "trainability"){
           if (Number(param) > 1 + filterStrength){
             url += `${ansKey}=${param}&`;
-            console.log(ansKey + "added to url: " + param);
+            //console.log(ansKey + "added to url: " + param);
           }
         } else{
           if (Number(param) < 5 - filterStrength){
             url += `${ansKey}=${param}&`;
-            console.log(ansKey + "added to url: " + param);
+            //console.log(ansKey + "added to url: " + param);
           }
         }
       }
@@ -65,7 +65,7 @@ export default class ExternalServices {
         param = ans[prefKey];
         url += `${prefKey}=${param}&`;
       }
-      console.log(url)
+      //console.log(url)
       return url
     }
 

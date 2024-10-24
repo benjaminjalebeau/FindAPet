@@ -1,16 +1,7 @@
-// function for the API to pull page text from wikipedia page, limited to 500 characters. Requires breed name pulled from different api.
-// Function will need to be modified to insert text to an html element instead of the console.
-
-
-
-// Function get data from ninja api for dogs. Can only return up to 20 results, must have parameters.
-// Parameters are number values used for url parameters
-
-
 
 
 /******************************************
-Below are insturctions on how to call various API's
+Below are insturctions on how to call various API's Some used, some not.
 *************************************************/
 
 /*const url = 'https://dogbreeddb.p.rapidapi.com/?ordering=-breedName';

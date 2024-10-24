@@ -17,8 +17,8 @@ if(!getLocalStorage("UserAnswers") || !getLocalStorage("UserPreference") ){
     const htmlTag = document.querySelector(".breedList");
     let list = new BreedList(dataSource, htmlTag);
     list.init();
-
+    
 }
 
-//wikiAPI("Golden Retriever")
+
 

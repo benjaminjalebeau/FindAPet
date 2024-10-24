@@ -16,6 +16,7 @@ export default class BreedList {
     constructor(dataSource, listElement){
         this.dataSource = dataSource;
         this.listElement = listElement;
+        this.matchValue = 5;
     }
 
     async init() {
@@ -26,15 +27,33 @@ export default class BreedList {
         if(list.length === 0)
           for (let i = 1; i < 5; i++){
             url = await this.dataSource.createBreedListURL(i);
-            console.log(url);
             list = await this.dataSource.getNinjaDogAPIdata(url);
+            this.matchValue -= 1;
             if(list.length > 0){break}
           }
         //Once results have been found, a template will be used to generate the breedlist view.
+        document.querySelector("#matchMessage").innerHTML = this.returnMatchMessage();
         this.renderList(list)
     }
     //Generates content using a template and stored api data.
     renderList(list){
         renderListWithTemplate(breedCardTemplate, this.listElement, list)
+    }
+
+    //This will return a message depending on how many parameters were asjusted to get results.
+    returnMatchMessage(){
+      switch (this.matchValue){
+        case 5:
+          return "Match Strength: Great! These breeds will fit your lifestyle very well!";
+        case 4:
+          return "Match Strength: Good! These breeds will fit your lifestyle well!";
+        case 3:
+          return "Match Strength: Decent. These breeds will be an okay fit to your lifestyle.";
+        case 2:
+          return "Match Strength: Poor. There weren't breeds that fit well into your lifestyle, but these will be your best bet.";
+        case 1:
+          return "Match Strength: Very Poor. Perhaps a dog won't fit well into your lifestyle, but try looking at these breeds.";
+      }
+
     }
 }
