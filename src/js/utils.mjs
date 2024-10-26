@@ -55,12 +55,6 @@ export async function loadHeaderNavFooter() {
 }
 
 
-// Renders the User Form
-export async function loadUserForm() {
-  const formPartial = await loadPartial("../partials/userInfoForm.html");
-  const formElement = document.querySelector("#formPartial");
-  renderWithPartial(formPartial, formElement);
-}
 
 // takes a form element and returns an object where the key is the "name" of the form input.
 export function formDataToJSON(formElement) {
@@ -96,4 +90,20 @@ export function getParams(param) {
   const urlParams = new URLSearchParams(queryString);
   const product = urlParams.get(param);
   return product;
+}
+
+//Checks to see if the forms have been filled out, if so, prevents link to breedlist.
+export async function checkForms(){
+  //Becuase the nav is loaded via funtion, a slight delay is needed to make sure
+  // the dom gets updated before the link in the nav is selected.
+  const delay = ms => new Promise(res => setTimeout(res, ms));
+  await delay(100);
+  let linkElement = document.querySelector(".preventLink");
+  console.log(linkElement)
+  linkElement.addEventListener("click", (e) => {
+    if(!getLocalStorage("UserAnswers") || !getLocalStorage("UserPreference") ){
+      alert("Fill out the forms first!")
+      e.preventDefault();
+    }
+  })
 }

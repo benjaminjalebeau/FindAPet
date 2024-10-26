@@ -1,4 +1,4 @@
-import { loadHeaderNavFooter, loadUserForm } from "./utils.mjs";
+import { loadHeaderNavFooter, checkForms} from "./utils.mjs";
 import UserInfo from "./UserInfo.mjs";
 
 
@@ -46,7 +46,6 @@ var i;
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    console.log(this.classList)
     
     
     var content = this.nextElementSibling;
@@ -61,4 +60,7 @@ for (i = 0; i < coll.length; i++) {
     } 
   });
 }
+
+checkForms();
+
 

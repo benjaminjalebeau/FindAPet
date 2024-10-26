@@ -5,8 +5,24 @@ import { renderListWithTemplate, getLocalStorage } from "./utils.mjs";
 function breedCardTemplate(breed) {
     return `<li class="breedCard">
       <a href="/infoPage/index.html?breed=${breed.name}">
-        <img src="${breed.image_link}" alt="Picture of a ${breed.name}" />
-        <h3 class="cardName">${breed.name}</h3>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="${breed.image_link}" alt="Picture of a ${breed.name}" />
+            <h3 class="cardName">${breed.name}</h3>
+          </div>
+          <div class="flip-card-back">
+            <h3 class="cardName">${breed.name}</h3>
+            <ul>
+              <img class="flippedImage" src="${breed.image_link}" alt="Picture of a ${breed.name}" />
+              <li>Life Expectancy: ${breed.min_life_expectancy} - ${breed.max_life_expectancy} years</li>
+              <li>Weight: ${breed.min_weight_female} - ${breed.max_weight_male} lbs</li>
+              <li>Height: ${breed.min_height_female} - ${breed.max_height_male} inches</li>
+            </ul>
+
+          </div>
+        </div>
+      </div>  
       </a>
     </li>`;
   }

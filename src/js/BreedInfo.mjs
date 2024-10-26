@@ -114,9 +114,10 @@ function otherDogInfo(num){
 // Template for breed info obtained from NinjaApi
 function breedInfoTemplate(breed){
     return `
-    <h1>${breed.name}</h1>
+    <h2>${breed.name}</h2>
     <img src="${breed.image_link}" alt="Picture of a ${breed.name}">
-    <h2>Quick Facts</h2>
+    <div id="factsContainer">
+    <h3>Quick Facts</h3>
     <ul>
         <li>${sheddingInfo(String(breed.shedding))}</li>
         <li>${barkingInfo(String(breed.barking))}</li>
@@ -126,6 +127,7 @@ function breedInfoTemplate(breed){
         <li>${childrenInfo(String(breed.good_with_children))}</li>
         <li>${otherDogInfo(String(breed.good_with_other_dogs))}</li> 
     </ul>
+    </div>
     `
 
 }
