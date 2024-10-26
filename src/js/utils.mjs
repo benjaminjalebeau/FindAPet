@@ -97,7 +97,6 @@ export async function checkForms(){
   //Becuase the nav is loaded via funtion, a slight delay is needed to make sure
   // the dom gets updated before the link in the nav is selected.
   let linkElement = document.querySelector(".preventLink");
-  console.log(linkElement)
   linkElement.addEventListener("click", (e) => {
     if(!getLocalStorage("UserAnswers") || !getLocalStorage("UserPreference") ){
       document.querySelector(".alert").innerHTML = "Fill out both forms please!";
