@@ -97,7 +97,7 @@ export async function checkForms(){
   //Becuase the nav is loaded via funtion, a slight delay is needed to make sure
   // the dom gets updated before the link in the nav is selected.
   const delay = ms => new Promise(res => setTimeout(res, ms));
-  await delay(100);
+  await delay(500);
   let linkElement = document.querySelector(".preventLink");
   console.log(linkElement)
   linkElement.addEventListener("click", (e) => {
