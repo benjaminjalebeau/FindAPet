@@ -10,6 +10,8 @@ function sheddingInfo(num){
         return "Sheds a great deal"
     } else if(num === "5"){
         return "Sheds more than most breeds"
+    } else{
+        return "Fact for shedding is unavailable"
     }
 }
 
@@ -24,6 +26,8 @@ function barkingInfo(num){
         return "Barks a large amount"
     } else if(num === "5"){
         return "Barks more than most breeds"
+    } else{
+        return "Fact for barking behavior is unavailable"
     }
 }
 
@@ -38,6 +42,8 @@ function energyInfo(num){
         return "Very active"
     } else if(num === "5"){
         return "More active than most breeds"
+    } else{
+        return "Fact for activity level is unavailable"
     }
 }
 
@@ -47,11 +53,13 @@ function trainabilityInfo(num){
     } else if(num === "2"){
         return "Very difficult to train"
     } else if(num === "3"){
-        return "Moderatley easy to train"
+        return "moderately easy to train"
     } else if(num === "4"){
         return "Very easy to train"
     } else if(num === "5"){
         return "Easier to train than most breeds"
+    } else{
+        return "Fact for trainability is unavailable"
     }
 }
 
@@ -66,6 +74,8 @@ function proctectivenessInfo(num){
         return "Very likely to be alert to strangers"
     } else if(num === "5"){
         return "Extremely likely to be alert to strangers"
+    } else{
+        return "Fact for alertness is unavailable"
     }
 }
 
@@ -80,6 +90,8 @@ function childrenInfo(num){
         return "Good with children"
     } else if(num === "5"){
         return "Great with children"
+    } else{
+        return "Fact for behavior around children is unavailable"
     }
 }
 
@@ -94,6 +106,8 @@ function otherDogInfo(num){
         return "Good with other dogs"
     } else if(num === "5"){
         return "Great with other dogs"
+    } else{
+        return "Fact for behavior around other dogs is unavailable"
     }
 }
 

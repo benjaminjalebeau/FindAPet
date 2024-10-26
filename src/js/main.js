@@ -38,3 +38,27 @@ document.querySelector("#clearAnswers").addEventListener("click", (e) => {
     document.querySelector("#submitAnswersMessage").removeAttribute('hidden');
     document.querySelector("#submitPreferencesMessage").removeAttribute('hidden');
   });
+ 
+// Collapses or expands intro or instr paragraphs.
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    console.log(this.classList)
+    
+    
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+      this.querySelector(".arrow").classList.remove("up");
+      this.querySelector(".arrow").classList.add("down");
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      this.querySelector(".arrow").classList.remove("down");
+      this.querySelector(".arrow").classList.add("up");
+    } 
+  });
+}
+

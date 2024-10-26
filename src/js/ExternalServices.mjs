@@ -1,8 +1,6 @@
 import { getLocalStorage } from "./utils.mjs";
 
-function checkFilter(filterstrength){ 
-  
-}
+
 //As stated, converts an api response to a json file.
 function convertToJson(res) {
     if (res.ok) {

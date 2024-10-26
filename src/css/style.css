@@ -29,6 +29,67 @@ h1,h2,h3 {
     background-color: white;
 }
 
+.textWrapper{
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.collapsible{
+    font-family: Georgia, serif;
+    font-size: 1.5em;
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    padding: 10px 5px;
+    border-radius: 3px;
+    
+}
+
+.collapsible:hover{
+    background-color: lightgray;
+    transition: .5s;
+}
+
+.collapsedContent {
+    max-height: 0;
+    margin: 0 auto 1em auto;
+    width: 90%;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    text-align: left;
+    
+}
+
+.arrow{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 0 .3em .1em 0;
+    background-color: grey;
+}
+
+.down {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transition: .5s;
+  }
+
+.up{
+    border: solid #FFDC7F;
+    border-width: 0 3px 3px 0;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    
+    transition: .5s;
+}
+
+
+
 
 /*****Header/Nav*****/
 .logo{
@@ -60,6 +121,8 @@ nav ul li a:hover{
     color: #FFDC7F;
     text-decoration: underline;
     font-weight: bolder;
+    transition: .5s;
+    
   }
 
 /*****Main Content*****/
@@ -67,6 +130,12 @@ main {
     margin: auto;
     width: 95%;
 }
+
+h2{
+    text-align: center;
+}
+
+
 /*Forms*/
 form{
     background-color: #227B94;
@@ -94,6 +163,7 @@ form select{
 
 form select:hover{
     border: solid 2px #16325B;
+    transition: .2s;
 }
 
 .buttonBox{
@@ -113,6 +183,7 @@ form button{
 form button:hover{
     background-color: #78B7D0;
     color: black;
+    transition: .3s;
 }
 
 form button:active {
@@ -134,6 +205,7 @@ form button:active {
 #clearAnswers:hover {
     border-color: red;
     color: #FFDC7F;
+    transition: .5s;
 }
 
 #clearAnswers:active {
@@ -176,6 +248,7 @@ footer{
 .breedList li:hover{
     border-color: #16325B;
     background-color: #78B7D0;
+    transition: .3s;
 }
 
 .breedList li a {
@@ -186,6 +259,7 @@ footer{
 
 .breedList li a img{
     max-width: 100%;
+    border-radius: 4px;
 }
 
 /*****BreedInfo Page*****/
