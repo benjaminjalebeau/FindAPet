@@ -64,6 +64,11 @@ main {
     width: 95%;
 }
 
+.alert {
+    text-align: center;
+    color: red;
+}
+
 h2{
     background-color: #16325B;
     color: #FFDC7F;

@@ -102,7 +102,7 @@ export async function checkForms(){
   console.log(linkElement)
   linkElement.addEventListener("click", (e) => {
     if(!getLocalStorage("UserAnswers") || !getLocalStorage("UserPreference") ){
-      alert("Fill out the forms first!")
+      document.querySelector(".alert").innerHTML = "Fill out both forms please!";
       e.preventDefault();
     }
   })
