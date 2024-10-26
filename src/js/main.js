@@ -1,10 +1,7 @@
-import { loadHeaderNavFooter, checkForms} from "./utils.mjs";
+import { checkForms} from "./utils.mjs";
 import UserInfo from "./UserInfo.mjs";
 
 
-
-// Renders header and footer
-loadHeaderNavFooter();
 
 //Creates UserInfo Object to Process Form Results.
 let userAnswers = new UserInfo();
@@ -61,6 +58,8 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-checkForms();
+document.addEventListener("DOMContentLoaded", (e) => {
+  checkForms();
+})
 
 

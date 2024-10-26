@@ -5,14 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FindAPet | Home</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <script type="module" src="js/main.js"></script>
-    <!--script type="module" src="js/api.js"></script-->
+    
   </head>
   <body>
     <div id="contentWrapper">
     
-    <header class="divider" id="headerPartial"></header>
-    <nav id="navPartial"></nav>
+    <header class="divider" id="headerPartial">
+      <div class="logo">
+        <h1> FindAPet</h1>
+      </div>
+    </header>
+      <nav id="navPartial">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li ><a class="preventLink" href="/breedspage/index.html" >Matching Breeds</a></li>
+      </ul>
+    </nav>
     <div class="alert"></div>
     
     
@@ -124,8 +132,9 @@
 
     </main>
 
-    <footer id="footerPartial"></footer>
+    <footer id="footerPartial">&copy;Ben LeBeau WDD 330 Final Project</footer>
 
   </div>
+  <script type="module" src="js/main.js"></script>
   </body>
 </html>
