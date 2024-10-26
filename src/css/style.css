@@ -254,7 +254,7 @@ footer{
 .breedList li{
     width: 90%;
     padding: 1em;
-    background-color: #227B94;
+    background-color: #16325B;
     border: solid 3px #FFDC7F;
     border-radius: 4px;
     margin-bottom: 10px;
@@ -280,7 +280,7 @@ footer{
 
 /*CardFlips*/
 .breedCard h3{
-    background-color: #227B94;
+    background-color: #16325B;
     border-radius: 4px;
     padding: 3px 0;
 }
@@ -297,7 +297,7 @@ footer{
 }
 
 .breedCard ul li:hover{
-    background-color: #227B94;
+    background-color: #16325B;
 }
 .flip-card {
     background-color: transparent;
@@ -341,7 +341,7 @@ footer{
 }
 
 #factsContainer{
-    background-color: #227B94;
+    background-color: #16325B;
     border: solid 3px #FFDC7F;
     border-radius: 4px;
     color: #FFDC7F;
