@@ -6,7 +6,7 @@ Webstite to help find pets according to lifestyle.
 
 ## Prerequisites
 
-- You must have Node installed. visit https://byui-cit.github.io/advcss/lesson01/l01-software.html and skip to the Node section for instructions
+- You must have Node installed.
 
 ## Setup
 
